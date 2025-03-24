@@ -5,8 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -30,9 +30,10 @@ header {
 
 }
 
-header h1 {
+header > h1 {
     font-family: var(--fonte-titulo);
     font-size: 10vw;
+    font-variant: small-caps;
 }
 
 header a:visited {
@@ -43,26 +44,21 @@ header p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-main {
-    font-family: var(--fonte-texto);
-}
-
 article {
-    font-size: 6vh;
     white-space: pre-line;
-    margin-left: 20px;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--fonte-texto);   
+    font-size: 4.5vw;
 
 }
 
-section.imagem > article {
-    background-color: rgba(0, 0, 0, 0.63);
-    display: inline-flex;
-    padding: 10px;
-    overflow: hidden;
-    max-width: fit-content;
-}
-
-.imagem {
+section.imagem {
     color: white;
     background-size: cover;
     background-position: center;
@@ -72,12 +68,25 @@ section.imagem > article {
     padding: auto;
 }
 
-.normal {
+section.imagem > article {
+    background-color: rgb(0, 0, 0);
+    display: inline-block;
+    padding: 10px;
+    overflow: hidden;
+    max-width: fit-content;
+}
+
+
+
+section.normal {
+    background-color: white;
+    color: black;
     padding-bottom: 15vh;
 }
 
 section#f1 {
     background-image: url('imagens/background001.jpg');
+    background-position: right center;
 }
 
 section#f2 {
@@ -87,6 +96,6 @@ section#f2 {
 footer {
     color: white;
     background-color: black;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
 }
